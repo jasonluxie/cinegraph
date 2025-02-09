@@ -6,8 +6,6 @@ Cinegraph is React based data visualization and modeling application which accep
 
 ## Deployment
 
-The website is deployed on [Heroku](https://movie-data-model.herokuapp.com/)
-
 ## Contributors
 
 -   [Jessica Guico](https://github.com/jessicamcg)
@@ -15,9 +13,6 @@ The website is deployed on [Heroku](https://movie-data-model.herokuapp.com/)
 -   [Nick Margaritondo](https://github.com/Nickm615)
 
 -   [Jason Xie](https://github.com/jasonluxie)
-
-## Demonstration
-![Gif shoiwing login and adding movie to chart](./client/src/assets/project-3-demo.gif)
 
 ### API
 
