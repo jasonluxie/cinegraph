@@ -1,4 +1,4 @@
-# project-3
+# Cinegraph
 
 ## Description
 
