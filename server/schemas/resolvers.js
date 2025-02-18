@@ -18,7 +18,6 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     movieData: async (parent, args) => {
-
       const data = await movieData.movieQuery(args.query);
       const movieInfo = data.data
       movieInfo.Rating = data.data.Ratings[1].Value

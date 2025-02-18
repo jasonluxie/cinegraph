@@ -63,7 +63,7 @@ export default function SearchMovieForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        console.log(data)
+      console.log(data);
       setSearchOutput(data.data.movieData);
       setSearchYear("");
     } catch (e) {
