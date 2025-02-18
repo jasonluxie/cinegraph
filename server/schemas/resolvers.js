@@ -12,33 +12,27 @@ const resolvers = {
       return User.findOne({ username }).populate('savedMovies');
     },
     me: async (parent, args, context) => {
-      // console.log(context.user)
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('savedMovies');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
     movieData: async (parent, args) => {
-      // console.log(args)
+
       const data = await movieData.movieQuery(args.query);
       const movieInfo = data.data
       movieInfo.Rating = data.data.Ratings[1].Value
-      // console.log(movieInfo)
+
       return movieInfo
     },
     tryAgain: async (parent, args) => {
-      // console.log(args)
       const data = await tryAgain.movieQueryAgain(args.query, args.queryYear);
       const movieInfoAgain = data.data
       movieInfoAgain.Rating = data.data.Ratings[1].Value
-      // console.log(movieInfoAgain)
       return movieInfoAgain
     },
     savedMovies: async () => {
-      // console.log(data)
       const data = await Movies.find()
-      // console.log('=============================================================================================================')
-      // console.log(data)
       return data
     }
   },
@@ -73,11 +67,7 @@ const resolvers = {
       movieInfo.BoxOffice = data.data.BoxOffice
       movieInfo.Year = data.data.Year
       movieInfo.imdbID = data.data.imdbID
-      // console.log(movieInfo)
       Movies.create(movieInfo)
-      // movieInfo.title = data.data.Title
-      // movieInfo.title = data.data.Title
-
     },
 
     saveMovie: async (parent, args) => {

@@ -7,11 +7,11 @@ const moviesSchema = new Schema({
         trim: true,
         unique: true
     },
-    Rating: {// rotten tom
+    Rating: {
         type: String,
         required: true
     },
-    BoxOffice: {//boxoffice
+    BoxOffice: {
         type: String,
         required: true
     },

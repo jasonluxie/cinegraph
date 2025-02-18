@@ -8,7 +8,6 @@ router.use((req, res) => {
 
 const movieData = {
   movieQuery: async (query) => {
-    // console.log(query)
     const fixedQuery = query.split(" ").join("+")
     return await axios({
       method: 'get',
