@@ -1,6 +1,9 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engines" :{
+    "node" : "16.x"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -20,5 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.7",
     "node-fetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

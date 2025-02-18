@@ -4,8 +4,6 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 export default function Footer() {
-    const [value, setValue] = React.useState(0);
-
     return (
         <Box className="footer">
             <Typography variant="caption" align="center">

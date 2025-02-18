@@ -48,7 +48,7 @@ export default function RemoveMovieForm(props) {
         }
     };
 
-    if (movies == undefined) {
+    if (movies === undefined) {
         return <Box></Box>;
     }
 

@@ -3,7 +3,6 @@ import {
     CartesianGrid,
     XAxis,
     YAxis,
-    ZAxis,
     Tooltip,
     Legend,
     Scatter,
@@ -41,7 +40,7 @@ export default function RenderScatterChart(props) {
         return [segment, segment * 2, segment * 3];
     };
     const movieArray = props.database.savedMovies;
-    if (movieArray == undefined) {
+    if (movieArray === undefined) {
         return <Box></Box>;
     }
 
