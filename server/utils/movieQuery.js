@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 const axios = require('axios')
+require('dotenv').config()
 const omdbapi = process.env.OMDB_API_KEY
 router.use((req, res) => {
   res.sendFile(path.join(__dirname, '../../client/build/index.html'));
@@ -9,9 +10,10 @@ router.use((req, res) => {
 const movieData = {
   movieQuery: async (query) => {
     const fixedQuery = query.split(" ").join("+")
+    console.log('omdb', omdbapi)
     return await axios({
       method: 'get',
-      url: `http://www.omdbapi.com/?apikey=${omdbapi}&t&t=${fixedQuery}`,
+      url: `http://www.omdbapi.com/?apikey=${omdbapi}&t=${fixedQuery}`,
     })
   }
 }
@@ -22,7 +24,7 @@ const tryAgain = {
     const fixedQuery = query.split(" ").join("+")
       return await axios({
         method: 'get',
-        url: `http://www.omdbapi.com/?apikey=${omdbapi}&t&t=${fixedQuery}&y=${queryYear}`,
+        url: `http://www.omdbapi.com/?apikey=${omdbapi}&t=${fixedQuery}&y=${queryYear}`,
       })
   }
 }
