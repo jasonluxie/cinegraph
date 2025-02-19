@@ -10,7 +10,6 @@ router.use((req, res) => {
 const movieData = {
   movieQuery: async (query) => {
     const fixedQuery = query.split(" ").join("+")
-    console.log('omdb', omdbapi)
     return await axios({
       method: 'get',
       url: `http://www.omdbapi.com/?apikey=${omdbapi}&t=${fixedQuery}`,
